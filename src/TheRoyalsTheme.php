@@ -35,7 +35,7 @@ class TheRoyalsTheme
     {
         $forumApiDocument = $document->getForumApiDocument();
 
-        Arr::set($document->meta, 'theme-color', '#d8dccf');
+        Arr::set($document->meta, 'theme-color', '#335146');
         // Arr::set(
             // $document->head,
             // 'manifest',
