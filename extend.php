@@ -15,12 +15,12 @@ use Flarum\Extend;
 
 return [
     (new Extend\Frontend('forum'))
-        ->js(__DIR__.'/js/dist/forum.js')
+        // ->js(__DIR__.'/js/dist/forum.js')
         ->css(__DIR__.'/less/forum.less')
         ->content(TheRoyalsTheme::class),
-    (new Extend\Frontend('admin'))
-        ->js(__DIR__.'/js/dist/admin.js')
-        ->css(__DIR__.'/less/admin.less'),
+    // (new Extend\Frontend('admin'))
+        // ->js(__DIR__.'/js/dist/admin.js')
+        // ->css(__DIR__.'/less/admin.less'),
     new Extend\Locales(__DIR__.'/locale'),
     (new Extend\View())
         // Add view folder
