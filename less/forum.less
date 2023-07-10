@@ -1,61 +1,4 @@
-#theroyals-main-title {
-  background: url('sites/all/themes/theroyals/images/the_royals_home.png') top left no-repeat;
-  width: 400px;
-  height: 162px;
-  float: left;
-}
-
-#theroyals-main-motor {
-  background: url('sites/all/themes/theroyals/images/motor_people.png') top right no-repeat;
-  width: 400px;
-  height: 427px;
-  float: right;
-  margin-top: 5%;
-  margin-right: 5%;
-  margin-left: 25px;
-}
-
-#theroyals-main-text {
-  padding: 3% 6% 1%;
-  margin: 0 5% 0;
-  clear: left;
-}
-
-#theroyals-main-text p {
-  line-height: 1.25em;
-  font-weight: bold;
-}
-
-#theroyals-main h1 {
-  text-align: right;
-  font-size: 3.5em;
-  padding-bottom: 5%;
-  margin-left: 25%;
-  text-align: center;
-  position: relative;
-}
-
-#theroyals-main h1 span {
-  display: inline-block;
-}
-
-#theroyals-main h1 span:before {
-  display: block;
-  content: open-quote;
-  float: left;
-  position: relative;
-  font-size: 1.5em;
-  padding-right: 0.2em;
-}
-
-#theroyals-main h1 span:after {
-  display: block;
-  content: close-quote;
-  float: right;
-  position: relative;
-  font-size: 1.5em;
-  padding-left: 0.2em;
-}
+@import url('https://www.theroyals.it/oldforum/style/TheRoyals_font.css');
 
 /* TheRoyals Css Style Header*/
 
@@ -114,6 +57,7 @@
       width: 294px;
       position: absolute;
       right: 20px;
+      z-index: @zindex-header;
     }
   }
 
@@ -132,28 +76,51 @@
     padding-right: 15px;
     padding-left: 15px;
     padding-bottom: 15px;
-    margin-top: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
   }
-}
 
-@media @tablet-up {
   .App-content {
     margin-bottom: 15px;
+    border-top: 0px;
+  }
+
+  #drawer #header .container {
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+  }
+
+  #header {
+    background: none;
+  }
+
+  #header-navigation {
+    margin-right: 0px;
+  }
+
+  // Was #theroyals-menu a
+  .Header-primary a {
+    text-decoration: none;
+    font-family: FontleroyBrownRegular;
+    font-size: 3em;
+    color: #fff;
+    padding-right: 8px;
+  }
+
+  .Header-secondary {
+    background: #fff;
+    border-radius: @border-radius;
+    margin-right: 15px;
+  }
+
+  .Header-title {
+    display: none;
   }
 }
 
 // TODO
 #theroyals-menu {
 	padding: 10px 5px;
-}
-
-#theroyals-menu a {
-	text-decoration: none;
-	font-family: FontleroyBrownRegular;
-	font-size: 2.5em;
-	color: #fff;
-	padding-left: 15px;
 }
 
 #theroyals-user-menu {
@@ -184,11 +151,13 @@
 // Change some color and background of flarum
 // the old #theroyals-bg
 #app {
-	background: url(https://www.theroyals.it/oldforum/style/TheRoyals/img/bg_image.png) repeat-x;
-	background-size: 100% 100%;
-	width: 100%;
-	overflow:auto;
-	padding-bottom: 150px;
+  @media @tablet-up {
+    background: url(https://www.theroyals.it/oldforum/style/TheRoyals/img/bg_image.png) repeat-x;
+    padding-bottom: 150px;
+    background-size: 100% 100%;
+    width: 100%;
+    overflow:auto;
+  }
 }
 
 #content .TagsPage .container,
