@@ -1,74 +1,61 @@
 @import url('https://www.theroyals.it/oldforum/style/TheRoyals_font.css');
 
+// Some variables
+@theroyals-green: #335146;
+
 /* TheRoyals Css Style Header*/
 
-  #theroyals-header {
-    position: relative;
-    background: url(https://www.theroyals.it/oldforum/style/TheRoyals/img/main_top.png) top repeat-x;
-    background-size: contain;
-    @media @tablet-up {
-      height: 100%;
-    }
+#theroyals-header {
+  position: relative;
+  background: url(https://www.theroyals.it/oldforum/style/TheRoyals/img/main_top.png) top repeat-x;
+  background-size: contain;
+  @media @tablet-up {
+    height: 100%;
   }
+  @media @phone {
+    height: 20vh;
+  }
+}
 
-  #theroyals-center {
-    margin: auto;
-    @media @tablet-up {
-      width: 750px;
-      height: 230px;
-      margin: auto;
-      position: relative;
-      position: relative;
-    }
+#theroyals-center {
+  margin: auto;
+  @media @tablet-up {
+    width: 750px;
+    height: 230px;
   }
+  @media @phone {
+    height: 100%;
+    width: 100%;
+  }
+  margin: auto;
+  position: relative;
+}
 
-  #theroyals-title {
-    background: url(https://www.theroyals.it/oldforum/style/TheRoyals/img/the_royals.png) no-repeat;
-    background-size: contain;
-    position: absolute;
-    @media @tablet-up {
-      height: 138px;
-      width: 381px;
-      top: 10px;
-      left: 60px;
-      position: absolute;
-    }
-  }
+#theroyals-title {
+  background: url(https://www.theroyals.it/img_condivise/header.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  margin-top: 5px;
+  height: 110%;
+  width: 100%;
+  z-index: @zindex-header+1;
+}
 
-  #theroyals-phrase {
-    background: url(https://www.theroyals.it/oldforum/style/TheRoyals/img/phrase.png) no-repeat;
-    background-size: contain;
-    position: absolute;
-    @media @tablet-up {
-      height: 87px;
-      width: 230px;
-      top: 135px;
-      left: 100px;
-      position: absolute;
-    }
-  }
+#theroyals-phrase {
+}
 
-  #theroyals-motor {
-    background: url(https://www.theroyals.it/oldforum/style/TheRoyals/img/motorRE.png) no-repeat;
-    background-size: 100% 100%;
-    position: absolute;
-    @media @tablet-up {
-      height: 257px;
-      width: 294px;
-      position: absolute;
-      right: 20px;
-      z-index: @zindex-header;
-    }
-  }
+#theroyals-motor {
+}
 
-  #theroyals-header-bottom {
-    background-color: #335146;
-    clear: both;
-    @media @tablet-up {
-      height: 6px;
-      width: 100%;
-    }
+#theroyals-header-bottom {
+  background-color: @theroyals-green;
+  clear: both;
+  @media @tablet-up {
+    height: 6px;
+    width: 100%;
   }
+}
 
 @media @tablet-up {
   #content .TagsPage .container,
@@ -99,6 +86,8 @@
   }
 
   // Was #theroyals-menu a
+  .Header-primary a:focus,
+  .Header-primary a:hover,
   .Header-primary a {
     text-decoration: none;
     font-family: FontleroyBrownRegular;
@@ -118,29 +107,10 @@
   }
 }
 
-// TODO
-#theroyals-menu {
-	padding: 10px 5px;
-}
-
-#theroyals-user-menu {
-	float: right;
-	margin-right: 15px;
-}
-
-#theroyals-wrap {
-	min-height: 100%;
-}
-
 #theroyals-bottom {
-	margin-top: -150px;
-	height: 150px;
-	width: 100%;
-	position: relative;
-	background-color: #335146;
-	clear: both;
-	color: white;
-	font-family: serif;
+  background-color: @theroyals-green;
+  color: white;
+  overflow: auto;
 }
 
 #theroyals-bottom .block {
@@ -151,12 +121,10 @@
 // Change some color and background of flarum
 // the old #theroyals-bg
 #app {
-  @media @tablet-up {
+	@media @tablet-up {
     background: url(https://www.theroyals.it/oldforum/style/TheRoyals/img/bg_image.png) repeat-x;
-    padding-bottom: 150px;
     background-size: 100% 100%;
-    width: 100%;
-    overflow:auto;
+    padding-bottom: 150px;
   }
 }
 
